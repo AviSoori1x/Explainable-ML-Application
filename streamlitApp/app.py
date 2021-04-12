@@ -6,12 +6,12 @@ from swat import CAS, options
 import json
 import altair as alt
 import SessionState
+import requests
+import io
+
 
 #declare a session state variable using the SessionState file from the gist. This will be used to store the CAS connection object 
 state = SessionState.get(swat_sess=None,samplepd=None,scored=None)
-
-#Open the SAS Viya logo image
-image = Image.open('images/sasLogo.png')
 
 #Define a function to convert a dictionary to a pandas dataframe, while preserving variable type. This is important 
 def dicttopd(datadictionary):
@@ -62,8 +62,13 @@ def explainML(samplepd, explainType):
 
     return labels_n, data_n
 
-image = Image.open('images/sasLogo.png')
-st.sidebar.image(image)
+#Open the SAS Viya logo image
+urlSAS  = 'https://github.com/AviSoori1x/Explainable-ML-with-SAS-Viya/blob/main/streamlitApp/images/sasLogo.png?raw=true'
+responseSAS = requests.get(urlSAS)
+image_bytes_SAS = io.BytesIO(responseSAS.content)
+imageSAS = Image.open(image_bytes_SAS)
+
+st.sidebar.image(imageSAS)
 st.sidebar.write("""
 # Explainable Machine Learning
 """)
@@ -94,13 +99,18 @@ if st.sidebar.button('Login'):
     except: 
         st.sidebar.write('Please Enter a valid user name and password')
 
-#Enter a header. Display a header and the image from the images folder above it. 
+#Enter a header. Display a header and the image from the link. 
 demo_title = st.sidebar.text_input('Please Enter Demo Title')
 heading = """
     # {} 
 """.format(demo_title)
-image = Image.open('images/brAIn.png')
-st.image(image)
+
+urlBrain = 'https://github.com/AviSoori1x/Explainable-ML-with-SAS-Viya/blob/main/streamlitApp/images/brAIn.png?raw=true'
+responseBrain = requests.get(urlBrain)
+image_bytes_Brain = io.BytesIO(responseBrain.content)
+imageBrain = Image.open(image_bytes_Brain)
+st.image(imageBrain)
+
 st.write(heading)
 st.write(' ')
 
