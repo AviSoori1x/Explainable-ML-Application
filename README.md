@@ -9,5 +9,5 @@ Now go to the streamlitApp directory with all the files. Dockerfile is here.
     2. Then run: docker run -p 8501:8501 app:latest
     3. Then test out your app at: http://localhost:8501/
 
-Make sure both the model training (notebook) and the connection to the CAS server is to the same host with the same logon credentials.
+Make sure both the model training (notebook) and the connection to the CAS server is to the same host with the permissions to access CAS tables in the global scope.
 
