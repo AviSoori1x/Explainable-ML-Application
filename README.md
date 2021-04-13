@@ -1,6 +1,6 @@
 # Explainable-ML-with-SAS-Viya
 Interactive Explainable Machine Learning with SAS Viya, Streamlit and Docker
-Assumptions: Access to Viya 3.5+ and VDMML 8.5+, Docker installed on your machine
+Assumptions: Access to Viya 3.5+ and VDMML 8.5+, Docker is installed on your machine
 In order to run this application, follow the following steps:
 1. Run the notebook from the first cell to the last. This creates and promotes the analytical base table and the final trained model as an ASTORE in CAS
 2. Got to the terminal and run the following commands (assuming you have Docker installed. If not, install Docker!)
