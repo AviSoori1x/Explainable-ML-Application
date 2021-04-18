@@ -1,4 +1,6 @@
 # Explainable-ML-with-SAS-Viya
+This repo is associated with the blog at: https://lnkd.in/dQK_9mq (or https://lnkd.in/dkUqX7v)
+
 Interactive Explainable Machine Learning with SAS Viya, Streamlit and Docker.
 Assumptions: Access to Viya 3.5+ and VDMML 8.5+, Docker is installed on your machine.
 In order to run this application, follow the following steps:
