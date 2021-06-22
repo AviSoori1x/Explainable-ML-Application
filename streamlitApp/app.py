@@ -13,12 +13,6 @@ import io
 #declare a session state variable using the SessionState file from the gist. This will be used to store the CAS connection object 
 state = SessionState.get(swat_sess=None,samplepd=None,scored=None)
 
-#Define a function to convert a dictionary to a pandas dataframe, while preserving variable type. This is important 
-def dicttopd(datadictionary):
-    for key in datadictionary:
-        datadictionary[key] = [datadictionary[key]]
-    return pd.DataFrame.from_dict(datadictionary)
-
 
 #The scoring function for hmeq with the streamlit cache decorator. This may speed things up if you keep scoring the same data again and again. Streamlit just caches the result.
 @st.cache
