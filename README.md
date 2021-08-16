@@ -1,4 +1,4 @@
-# Explainable-ML-with-SAS-Viya
+# Explainable-ML-with-Streamlit
 This repo is associated with the blog at: https://avi-soori.medium.com/interactive-explainable-machine-learning-with-sas-viya-streamlit-and-docker-35e7df5a9eef (or https://avisoori1x.github.io/2021/04/14/Interactive_Explainable_Machine_Learning_with_SAS_Viya,_Streamlit_and_Docker.html)
 
 Interactive Explainable Machine Learning with SAS Viya, Streamlit and Docker.
